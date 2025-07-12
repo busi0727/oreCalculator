@@ -1,4 +1,5 @@
 # oreCalculator
+oreCalculator v1.0.0
 
 ## 광물 무역 상자 계산기
 
