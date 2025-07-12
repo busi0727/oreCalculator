@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>상자 제작 가격 계산기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="theme-toggle" onclick="toggleTheme()" title="다크모드 전환">
+    <span id="theme-icon">🌙</span>
+  </div>
+
+  <div class="wrapper">
+    <div class="container">
+      <h2>상자 제작 가격 계산기</h2>
+
+      <label for="mineral">광물 선택:</label>
+      <select id="mineral">
+        <option value="Silver_bullion">은 원석</option>
+        <option value="Steel_bullion">강철 원석</option>
+        <option value="Orichalcorn_bullion">오리할콘 원석</option>
+        <option value="Adamantite_bullion">아다만타이트 원석</option>
+      </select>
+
+      <button onclick="calculateSelected()">선택한 광물 계산</button>
+
+      <div id="result" class="output"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div>2025-07-12 18:00 기준</div>
+    <div>Made by busi</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

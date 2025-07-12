@@ -1,0 +1,120 @@
+:root {
+  --container-bg: white;
+  --text-color: #333;
+  --output-bg: #f0f0f0;
+  --footer-color: #888;
+  --border-color: #ccc;
+  --select-bg: white;
+  --select-text: #000;
+  background: #f4f4f4;
+}
+
+body[data-theme='dark'] {
+  --container-bg: #1e1e1e;
+  --text-color: #eee;
+  --output-bg: #2b2b2b;
+  --footer-color: #aaa;
+  --border-color: #555;
+  --select-bg: #2b2b2b;
+  --select-text: #eee;
+  background: #121212;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+.container {
+  background: var(--container-bg);
+  color: var(--text-color);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--select-bg);
+  color: var(--select-text);
+  appearance: none;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.output {
+  margin-top: 20px;
+  background: var(--output-bg);
+  padding: 15px;
+  border-radius: 8px;
+  white-space: pre-line;
+}
+
+/* 다크모드 토글 버튼 */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--text-color);
+}
+
+/* 하단 정보 */
+footer {
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: var(--footer-color);
+  line-height: 1.4;
+}
